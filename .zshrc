@@ -117,3 +117,11 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
+
+# Node version manager
+export NVM_DIR=~/.nvm
+source /usr/local/opt/nvm/nvm.sh
+#source $(brew --prefix nvm)/nvm.sh
